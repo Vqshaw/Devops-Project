@@ -21,7 +21,8 @@ Above are the 3 most common part of a command line, **CommandName** is the rule 
 ### 1. ls command:
 This command list files and folders/directories within a system. Running it without a flag shows the contents in the present working directory as seen below.
 
-![ls example](<Images/Screenshot 2023-11-11 001502.png>)
+![Alt text](<Images/Screenshot 2023-11-11 001502.png>)
+
 
 ### 2. mkdir command:
 This command is used to create a one or more directories at once and set permissions for each of them. The user executing this command must have the previlege to create a new folder in the parent directory or they might get a permissin denied error.
