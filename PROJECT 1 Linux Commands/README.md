@@ -8,3 +8,7 @@ Tasks that require multiple steps on the GUI (Graphical User Interface) can be d
 A Linux command is utility or program that on the CLI. What is this CLI? it is a console that interacts with the system using texts and processes. 
 
 By pressing Enter at the end of every line, Linux commands are executed on the terminal. You can run commands to perform various tasks, such as: file manipulation, user management to package installation. 
+
+A typical command syntax looks like this:
+>`CommandName [option(s)] [parameter(s)]`
+
