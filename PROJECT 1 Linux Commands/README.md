@@ -1,0 +1,2 @@
+#  INTRODUCTION TO LINUX AND BASIC COMMANDS
+Linux is a family of **open-source Unix** operating system based on the Linux Kernel. They include Fedora, Ubuntu, Open SUSE, red HAT, and Dabian. It is required that when using Linux operating systems, you use a shell (a shell is a program that gives you access to the operating system's services.)
