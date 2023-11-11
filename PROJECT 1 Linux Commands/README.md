@@ -33,5 +33,6 @@ Here is the syntax below:
 mkdir [option] directory_name
 ```
 
+### 3. rmdir command:
 
 
