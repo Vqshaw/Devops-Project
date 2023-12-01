@@ -71,3 +71,35 @@ pwd
 ```
 ![pwd](<Screenshot 2023-12-01 194152.png>)
 
+### 6. `cat` command:
+Concatenate, or `cat` combines and writes file to the standard output. There are various ways to use the cat command and they are listed below.
+
+To display the content of a file, run this command:
+
+```
+cat file_name.txt
+```
+To merge the content of two files and store the output in a new file, run the following command:
+```
+cat file_name1.txt file_mame2.txt > file_name3.txt
+```
+To dispaly content in reverse order, run this command:
+```
+tac file_name.txt
+```
+![cat](<Screenshot 2023-12-01 200601.png>)
+
+### 7. `cp` command:
+This command is used to copy files or directories and their contents.
+To copy a file to a new directory, use the following command as seen below:
+```
+cp file_name.txt /home/bagshaw/Downloads
+```
+![cp](<Screenshot 2023-12-01 203718.png>)
+To copy the content of a file to a new file, enter `cp` followed by the source file and the destination file
+```
+cp newfile1.txt newfile.txt
+```
+![cp](<Screenshot 2023-12-01 204639.png>)
+
+To copy an entire directory, do the following:
