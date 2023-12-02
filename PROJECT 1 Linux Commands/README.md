@@ -107,3 +107,82 @@ cp newfile1.txt newfile.txt
 ![cp](<Screenshot 2023-12-01 204639.png>)
 
 To copy an entire directory, do the following:
+```
+cp -r /home/username/directory /home/username/directory
+i.e
+cp -r /home/bagshaw/Downloads /home/bagshaw/Documents
+```
+![cp](<Screenshot 2023-12-02 110038.png>)
+
+### 8. `mv` command:
+The primary use of the `mv` command is to move or rename file or directories. Additionally, it doesnt produce an output on execution.
+
+To execute this command, simply type `mv` followed by the file name as well as the destination directory. Here is an example below:
+
+```
+mv newfile.txt /home/bagshaw/Music
+```
+![mv](<Screenshot 2023-12-02 111008.png>)
+
+Also, the `mv` command can be used to rename file or directories as seen below:
+```
+mv newfile1.txt newfile1.sh
+```
+![mv](<Images/Screenshot 2023-12-02 111339.png>)
+
+### 9. `rmdir` command:
+To permanently delete a directory, use the `rmdir` command. In order for a user to run this command, that user has to have sudo privileges in the parent directory. Example below:
+```
+rmdir Devops_project/junk_files
+```
+![rmdir](<Images/Screenshot 2023-12-02 112119.png>)
+
+### 10. `rm` command:
+The command deletes files within a directory. The user performing this has to have write permission. Once a file has been deleted, it cannot be undone.
+
+```
+rm Downloads
+```
+![rm](<Images/Screenshot 2023-12-02 112556.png>)
+
+To remove multiple files, you can run this command:
+```
+rm filename1.txt filename2.txt filename3.txt
+```
+Here are other optons you can add:
+- -f removes a file without confirmation
+- -i prompts system confirmation before removing a file
+- -r deletes file and directories recursively
+
+
+
+### 11. `locate` command:
+This command is used to find a file the the database system. 
+Adding the -i argument, will turn off case sensitivity so that you can search for a file even if you do not remeber its exact name.
+```
+locate -i Downloads
+```
+
+
+![locate](<Images/Screenshot 2023-12-02 114113.png>)
+
+If you need to look for contents that have two or more words, you can add an asterisk(*).
+
+```
+locate -i school*note
+```
+This command will search for files that contain the words school and note, whether they are uppercase or lowercase.
+
+### 12. `find` command:
+THis command is used to search for files within a specific directory and perform subsequent operations. The general syntax is stated below:
+
+```
+find [option] [path] [expression]
+```
+
+If you want to look for a file name *newfile1.txt* within the home directory and its subfolders, here is the code below:
+```
+find /home newfile1.sh
+```
+![find](<Images/Screenshot 2023-12-02 115156.png>)
+
