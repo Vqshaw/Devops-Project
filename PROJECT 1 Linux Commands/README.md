@@ -240,7 +240,7 @@ head readme.txt
 - `-c` or `-bytes` prints the first customized number of bytes of each file.
 - `-q` or `-quiet` will not print headers specifying the file name.
 
-### 17. `taul` command:
+### 17. `tail` command:
 This command reads the last ten lines of a text, and it is also used to check if a file has new data or to check for error messages.
 
 ```
@@ -249,3 +249,49 @@ tail [option] [file]
 tail readme.txt
 ```
 ![tail](<Images/Screenshot 2023-12-02 130120.png>)
+
+### 18. `diff` command:
+Short for difference, this command compares two contents of a file line by line. After analyzing them, it will display the part that do not match.
+
+The general syntax:
+```
+diff [option] file1 file2
+```
+![diff](<Images/Screenshot 2023-12-02 133807.png>)
+
+Other options you can use:
+- `-c` displayes the difference between two files in a context form.
+- `-u` displays the output without redundant information.
+- `-i` makes the diff command case insensitive.
+
+### 19. `tar` command:
+This command archives multiple files into a TAR file - a common LInux format similar to a ZIP, with optional compression.
+
+Basic syntax:
+```
+tar [option] [archive_file] [file or directory to be archived]
+```
+For example, if I wanna archive files in a directory, here is the syntax code for that:
+```
+tar -cvf newfile1.tar /home/bagshaw/Devops_project
+```
+![tar](<Images/Screenshot 2023-12-02 135221.png>)
+
+Use:
+- -x to extract a file
+- -t to list the contents of a file
+- -u archives and add to an existing archive file
+
+### 20. `sudo` commands:
+Short for *superuser do*, this command lets you perform tasks that require administrative or root permissions.
+When using `sudo`, the system prompts users to authenticate themselves with their password. Then the system will log a timestamp as a tracker. By default, every root user can run `sudo` cpmmand for 15 minutes/session.
+
+If you try to run the `sudo` command without authenticating yourself, the system will log the activity as a security event.
+
+Basic syntax:
+```
+sudo (xcommand e.g apt upgrade)
+
+sudo apt upgrade
+```
+![sudo](<Images/Screenshot 2023-12-02 140513.png>)
