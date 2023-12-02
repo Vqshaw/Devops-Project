@@ -186,3 +186,66 @@ find /home newfile1.sh
 ```
 ![find](<Images/Screenshot 2023-12-02 115156.png>)
 
+### 13. `grep` command: 
+Also known as **global regular expression print**, this command lets you find a word by searching through a text in a specific file.
+
+Once the `grep` command finds a match, it will print out all line that contain the specific pattern. THis command is very helpful when filtering through large log files.
+
+If I wanna search for the word 'rivers' in the file newfile1.sh, here is the command line.
+
+```
+grep Rivers newfile1.sh
+```
+![grep](<Images/Screenshot 2023-12-02 121147.png>)\
+
+### 14. `df` command:
+This command is used to report the system's disk space usage, shown in percentage and kilobyte (KB). Here is the general syntax:
+
+```
+df [option] [file]
+```
+- To see the current directory's disk system space in a human readable format. use `df -h`
+- To display information on the file system usage in MBs, use `df -m`
+- To display information on the file system usage in Kb, use `df -k`
+- To show file system type in a new column, use `df -T`
+
+![Alt text](<Images/Screenshot 2023-12-02 122241.png>)
+
+### 15. `du` command:
+This command can be used to check how much space a file or directory takes up. You can also run this command to identify which part of the system uses the storage excessively. For example:
+
+```
+du /home/bagsahw/Devops_project
+```
+
+alternatively,
+- use `du -s` to know the total size of a specific folder
+- use `du -m` to know the file and folder information in MBs
+- use `du -k` to know the file and folder information in kb
+- USE `DU -H` Tto know the last modification date of the dispalyed files and folders
+
+![du](<Images/Screenshot 2023-12-02 123754.png>)
+
+### 16. `head` command:
+This commands lets you view the first ten lines of a text.Adding an option lets you change the number of lines shown. THe hed command is also used output piped data to the CLI. For example:
+
+```
+head [option] [file]
+
+head readme.txt
+```
+![head](<Images/Screenshot 2023-12-02 125252.png>)
+
+- `-n` or `-lines` prints the first customized number of lines.
+- `-c` or `-bytes` prints the first customized number of bytes of each file.
+- `-q` or `-quiet` will not print headers specifying the file name.
+
+### 17. `taul` command:
+This command reads the last ten lines of a text, and it is also used to check if a file has new data or to check for error messages.
+
+```
+tail [option] [file]
+
+tail readme.txt
+```
+![tail](<Images/Screenshot 2023-12-02 130120.png>)
