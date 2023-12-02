@@ -91,11 +91,15 @@ tac file_name.txt
 
 ### 7. `cp` command:
 This command is used to copy files or directories and their contents.
+
+
 To copy a file to a new directory, use the following command as seen below:
 ```
 cp file_name.txt /home/bagshaw/Downloads
 ```
 ![cp](<Screenshot 2023-12-01 203718.png>)
+
+
 To copy the content of a file to a new file, enter `cp` followed by the source file and the destination file
 ```
 cp newfile1.txt newfile.txt
