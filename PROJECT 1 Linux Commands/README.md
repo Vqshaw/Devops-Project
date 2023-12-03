@@ -294,4 +294,5 @@ sudo (xcommand e.g apt upgrade)
 
 sudo apt upgrade
 ```
+
 ![sudo](<Images/Screenshot 2023-12-02 140513.png>)
