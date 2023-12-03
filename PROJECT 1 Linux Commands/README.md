@@ -130,6 +130,7 @@ mv newfile1.txt newfile1.sh
 ```
 ![mv](<Images/Screenshot 2023-12-02 111339.png>)
 
+
 ### 9. `rmdir` command:
 To permanently delete a directory, use the `rmdir` command. In order for a user to run this command, that user has to have sudo privileges in the parent directory. Example below:
 ```
