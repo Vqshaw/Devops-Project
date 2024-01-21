@@ -297,3 +297,63 @@ sudo apt upgrade
 ```
 
 ![sudo](<Images/Screenshot 2023-12-02 140513.png>)
+
+## File Permissions and Ownership
+### 21. `chmod`command:
+This is a command that lets you modify a directorie's read, write, and execute permissions. In Linux, each file is associated with three user classes - owner, group member, and others.
+
+Below is the basic syntax:
+```
+chmod [option] [permission] [file_name]
+```
+For example, the owner is currently the only one with full permissions to change note.txt. To allow group members and others to read, write, and execute the file, change it to the -rwxrwxrwx permission type, whose numeric value is 777:
+```
+chmod 777 tonye.yml
+```
+![Chmod ](<Screenshot 2024-01-21 121128.png>)
+
+This command supports many options, including:
+
+-c or –changes displays information when a change is made. -f or –silent suppresses the error messages. -v or –verbose displays a diagnostic for each processed file.
+
+### 22. `chown` command:
+The chown command lets you change the ownership of a file, directory, or symbolic link to a specified username.
+
+Here’s the basic format:
+```
+chown [option] owner[:group] file(s)
+```
+For example, you want to make tonye the owner of tonye.yml:
+```
+chown linuxuser2 filename.txt
+```
+![chown](<Images/Screenshot 2024-01-21 121738.png>)
+
+### 23. `jobs` command:
+A job is a process that the shell starts. The jobs command will display all the running processes along with their statuses. Remember that this command is only available in csh, bash, tcsh, and ksh shells.
+
+This is the basic syntax:
+```
+jobs [options] jobID
+```
+To check the status of jobs in the current shell, simply enter jobs to the CLI.
+
+Here are some options you can use:
+
+-l lists process IDs along with their information. -n lists jobs whose statuses have changed since the last notification. -p lists process IDs only.
+
+### 24. `kill` command:
+Use the kill command to terminate an unresponsive program manually. It will signal misbehaving applications and instruct them to close their processes.
+
+To kill a program, you must know its process identification number (PID). If you don’t know the PID, run the following command:
+```
+ps ux
+```
+There are 64 signals that you can use, but these two are among the most commonly used:
+
+SIGTERM requests a program to stop running and gives it some time to save all of its progress. The system will use this by default if you don’t specify the signal when entering the kill command. SIGKILL forces programs to stop, and you will lose unsaved progress. For example, the program’s PID is 1552, and you want to force it to stop:
+
+```
+kill SIGKILL 1552
+```
+![Alt text](<Images/Screenshot 2024-01-21 122635.png>)
