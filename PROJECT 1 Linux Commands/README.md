@@ -37,8 +37,7 @@ Here is the syntax below:
 ```
 mkdir [option] directory_name
 ```
-
-![mkdir](<Screenshot 2023-12-01 192217.png>)
+![mkdir](<Images/Screenshot 2023-12-01 192217.png>)
 
 ### 3. `cd` command:
 This command is used to navigate through files and directories. Running this command without an option will take you to the home drirectory.
@@ -56,21 +55,21 @@ To go to the home directory, use the below command
 ```
 cd
 ```
-![cd](<Screenshot 2023-12-01 193443.png>)
+![cd](<Images/Screenshot 2023-12-01 193443.png>)
 
 ### 4. `touch` command:
 This command is used to create a new empty file
 ```
 ls
 ```
-![ls](<Screenshot 2023-12-01 193849.png>)
+![ls](<Images/Screenshot 2023-12-01 193849.png>)
 
 ### 5. `pwd` command:
 This command is used to find the path of your present working directory
 ```
 pwd
 ```
-![pwd](<Screenshot 2023-12-01 194152.png>)
+![pwd](<Images/Screenshot 2023-12-01 194152.png>)
 
 ### 6. `cat` command:
 Concatenate, or `cat` combines and writes file to the standard output. There are various ways to use the cat command and they are listed below.
@@ -88,7 +87,7 @@ To dispaly content in reverse order, run this command:
 ```
 tac file_name.txt
 ```
-![cat](<Screenshot 2023-12-01 200601.png>)
+![cat](<Images/Screenshot 2023-12-01 200601.png>)
 
 ### 7. `cp` command:
 This command is used to copy files or directories and their contents.
@@ -113,7 +112,7 @@ cp -r /home/username/directory /home/username/directory
 i.e
 cp -r /home/bagshaw/Downloads /home/bagshaw/Documents
 ```
-![cp](<Screenshot 2023-12-02 110038.png>)
+![cp](<Images/Screenshot 2023-12-02 110038.png>)
 
 ### 8. `mv` command:
 The primary use of the `mv` command is to move or rename file or directories. Additionally, it doesnt produce an output on execution.
@@ -123,7 +122,7 @@ To execute this command, simply type `mv` followed by the file name as well as t
 ```
 mv newfile.txt /home/bagshaw/Music
 ```
-![mv](<Screenshot 2023-12-02 111008.png>)
+![mv](<Images/Screenshot 2023-12-02 111008.png>)
 
 Also, the `mv` command can be used to rename file or directories as seen below:
 ```
@@ -311,7 +310,7 @@ For example, the owner is currently the only one with full permissions to change
 ```
 chmod 777 tonye.yml
 ```
-![chmod](<Screenshot 2024-01-21 121128.png>)
+![chmod](<Images/Screenshot 2024-01-21 121128.png>)
 
 This command supports many options, including:
 
@@ -557,3 +556,83 @@ These are the most common commands you can add to apt-get:
 
 ![aptget](<Images/Screenshot 2024-01-21 132707.png>)
 
+### 36. `nano`, `vi`, `jed` commands:
+Linux allows users to edit and manage files via a text editor, such as nano, vi, or jed. nano and vi come with the operating system, while jed has to be installed.
+
+The `nano` command denotes keywords and can work with most languages. To use it, enter the following command:
+
+```
+nano [filename]
+```
+`vi` uses two operating modes to work – insert and command. insert is used to edit and create a text file. On the other hand, the command performs operations, such as saving, opening, copying, and pasting a file.
+
+To use vi on a file, enter:
+
+```
+vi [filename]
+```
+`jed` has a drop-down menu interface that allows users to perform actions without entering keyboard combinations or commands. Like vi, it has modes to load modules or plugins to write specific texts.
+
+To open the program, simply enter jed to the command line.
+
+### 37. `alias`, `unalias` commands:
+alias allows you to create a shortcut with the same functionality as a command, file name, or text. When executed, it instructs the shell to replace one string with another.
+
+To use the alias command, enter this syntax:
+
+```
+alias Name=String
+```
+For example, you want to make k the alias for the kill command:
+
+```
+alias k=’kill’
+```
+On the other hand, the unalias command deletes an existing alias.
+
+Here’s what the general syntax looks like:
+
+```
+unalias [alias_name]
+```
+
+### 38. `su` command:
+The switch user or su command allows you to run a program as a different user. It changes the administrative account in the current log-in session. This command is especially beneficial for accessing the system through SSH or using the GUI display manager when the root user is unavailable.
+
+Here’s the general syntax of the command:
+
+```
+su [options] [username [argument]]
+```
+When executed without any option or argument, the su command runs through root privileges. It will prompt you to authenticate and use the sudo privileges temporarily.
+
+Here are some acceptable options to use:
+
+-p or –preserve-environment keeps the same shell environment, consisting HOME, SHELL, USER, and LOGNAME. -s or –shell lets you specify a different shell environment to run. -l or –login runs a login script to switch to a different username. Executing it requires you to enter the user’s password.
+
+### 39. `htop` command:
+The htop command is an interactive program that monitors system resources and server processes in real time. It is available on most Linux distributions, and you can install it using the default package manager.
+
+Compared to the top command, htop has many improvements and additional features, such as mouse operation and visual indicators.
+
+To use it, run the following command:
+
+```
+htop [options]
+```
+You can also add options, such as:
+
+-d or –delay shows the delay between updates in tenths of seconds. -C or –no-color enables the monochrome mode. -h or –help displays the help message and exit.
+
+### 40. `ps` command:
+The process status or ps command produces a snapshot of all running processes in your system. The static results are taken from the virtual files in the /proc file system.
+
+Executing the ps command without an option or argument will list the running processes in the shell along with:
+
+The unique process ID (PID) The type of the terminal (TTY) The running time (TIME) The command that launches the process (CMD)
+
+Here are some acceptable options you can use:
+
+-T displays all processes associated with the current shell session. -u username lists processes associated with a specific user. -A or -e shows all the running processes.
+
+![ps](<Images/Screenshot 2024-01-21 134616.png>)
