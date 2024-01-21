@@ -37,6 +37,7 @@ Here is the syntax below:
 ```
 mkdir [option] directory_name
 ```
+
 ![mkdir](<Screenshot 2023-12-01 192217.png>)
 
 ### 3. `cd` command:
@@ -310,7 +311,7 @@ For example, the owner is currently the only one with full permissions to change
 ```
 chmod 777 tonye.yml
 ```
-![Chmod ](<Screenshot 2024-01-21 121128.png>)
+![chmod](<Screenshot 2024-01-21 121128.png>)
 
 This command supports many options, including:
 
@@ -357,3 +358,202 @@ SIGTERM requests a program to stop running and gives it some time to save all of
 kill SIGKILL 1552
 ```
 ![Alt text](<Images/Screenshot 2024-01-21 122635.png>)
+
+### 25. `ping` command:
+The ping command is one of the most used basic Linux commands for checking whether a network or a server is reachable. In addition, it is used to troubleshoot various connectivity issues.
+
+Here’s the general format:
+
+Here is the syntax code
+```
+ping [option] [hostname_or_IP_address]
+```
+For example, you want to know whether you can connect to Google and measure its response time:
+```
+ping google.com
+```
+
+### 26. `wget` command:
+The Linux command line lets you download files from the internet using the wget command. It works in the background without hindering other running processes.
+
+The wget command retrieves files using HTTP, HTTPS, and FTP protocols. It can perform recursive downloads, which transfer website parts by following directory structures and links, creating local versions of the web pages.
+
+To use it, enter the following command:
+
+```
+wget [option] [url]
+```
+For example, enter the following command to download the latest version of WordPress:
+```
+wget https://wordpress.org/latest.zip
+```
+![wget](<Images/Screenshot 2024-01-21 124459.png>)
+
+### 27.    `uname` command:
+The uname or unix name command will print detailed information about your Linux system and hardware. This includes the machine name, operating system, and kernel. To run this command, simply enter uname into your CLI.
+
+Here’s the basic syntax:
+
+```
+uname [option]
+```
+These are the acceptable options to use:
+
+-a prints all the system information. -s prints the kernel name. -n prints the system’s node hostname.
+
+![uname](<Images/Screenshot 2024-01-21 125055.png>)
+
+### 28. `top` command:
+The top command in Linux Terminal will display all the running processes and a dynamic real-time view of the current system. It sums up the resource utilization, from CPU to memory usage.
+
+The top command can also help you identify and terminate a process that may use too many system resources.
+
+To run the command, simply enter top into the CLI.
+
+```
+top
+```
+
+![Alt text](<Images/Screenshot 2024-01-21 125313.png>)
+
+### 29. `history` command:
+With history, the system will list up to 500 previously executed commands, allowing you to reuse them without re-entering. Keep in mind that only users with sudo privileges can execute this command. How this utility runs also depends on which Linux shell you use.
+
+To run it, enter the command below:
+```
+history [option]
+```
+This command supports many options, such as:
+
+-c clears the complete history list. -d offset deletes the history entry at the OFFSET position. -a appends history lines.
+
+![history](<Images/Screenshot 2024-01-21 125628.png>)
+
+### 30. `man` command:
+The man command provides a user manual of any commands or utilities you can run in Terminal, including the name, description, and options.
+
+It consists of nine sections:
+
+Executable programs or shell commands System calls Library calls Games Special files File formats and conventions System administration commands Kernel routines Miscellaneous To display the complete manual, enter:
+
+```
+man [command_name]
+```
+For example, you want to access the manual for the ls command:
+
+```
+man ls
+```
+Enter this command if you want to specify the displayed section:
+
+```
+man [option] [section_number] [command_name]
+```
+For instance, you want to see section 2 of the ls command manual:
+
+```
+man 2 ls
+```
+
+### 31. `echo` command:
+The echo command is a built-in utility that displays a line of text or string using the standard output. Here’s the basic syntax:
+
+```
+echo [option] [string]
+```
+This command supports many options, such as:
+
+- `-n` displays the output without the trailing newline. 
+- `-e` enables the interpretation of the following backslash escapes: \a plays sound alert. \b removes spaces in between a text. \c produces no further output. 
+- `-E` displays the default option and disables the interpretation of backslash escapes.
+
+### 32. ``zip, unzip` commands:
+Use the zip command to compress your files into a ZIP file, a universal format commonly used on Linux. It can automatically choose the best compression ratio.
+
+The zip command is also useful for archiving files and directories and reducing disk usage.
+
+To use it, enter the following syntax:
+
+```
+zip [options] zipfile file1 file2….
+```
+For example, you have a file named tonye.yml that you want to compress into archive.zip in the current directory:
+
+```
+zip tonye.zip tonye.yml
+```
+On the other hand, the unzip command extracts the zipped files from an archive. Here’s the general format:
+
+```
+unzip [option] file_name.zip
+```
+So, to unzip a file called archive.zip in the current directory, enter:
+
+```
+unzip tonye.zip
+```
+
+![zip](<Images/Screenshot 2024-01-21 131029.png>)
+
+
+### 33. `hostname` command:
+Run the hostname command to know the system’s hostname. You can execute it with or without an option. Here’s the general syntax:
+
+```
+hostname [option]
+```
+There are many optional flags to use, including:
+
+-a or –alias displays the hostname’s alias. -A or –all-fqdns displays the machine’s Fully Qualified Domain Name (FQDN). -i or –ip-address displays the machine’s IP address. For example, enter the following command to know your computer’s IP address:
+
+```
+hostname -i
+```
+![hostname](<Images/Screenshot 2024-01-21 131756.png>)
+
+### 34. `useradd`, `userdel` commands:
+Linux is a multi-user system, meaning more than one person can use it simultaneously. useradd is used to create a new account, while the passwd command allows you to add a password. Only those with root privileges or sudo can run the useradd command.
+
+When you use the useradd command, it performs some major changes:
+
+Edits the /etc/passwd, /etc/shadow, /etc/group, and /etc/gshadow files for the newly created accounts. Creates and populates a home directory for the user. Sets file permissions and ownerships to the home directory. Here’s the basic syntax:
+
+```
+useradd [option] username
+```
+To set the password:
+
+```
+passwd the_password_combination
+```
+For example, to add a new person named John, enter the following command simultaneously:
+
+```
+useradd John
+
+passwd 123456789
+```
+To delete a user account, use the userdel command:
+
+```
+userdel username
+```
+
+### 35. `apt-get` command:
+apt-get is a command line tool for handling Advanced Package Tool (APT) libraries in Linux. It lets you retrieve information and bundles from authenticated sources to manage, update, remove, and install software and its dependencies.
+
+Running the apt-get command requires you to use sudo or root privileges.
+
+Here’s the main syntax:
+
+```
+apt-get [options] (command)
+```
+These are the most common commands you can add to apt-get:
+
+- `update` synchronizes the package files from their sources. 
+- `upgrade` installs the latest version of all installed packages. 
+- `check` updates the package cache and checks broken dependencies.
+
+![aptget](<Images/Screenshot 2024-01-21 132707.png>)
+
