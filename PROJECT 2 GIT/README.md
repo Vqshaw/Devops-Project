@@ -62,12 +62,12 @@ To delete a branch, we run the command `git branch -d production` where producti
 The first step to colaborate and create remote repositories, is to create a Github account. It can be done by navigating to https://github.com/ and click signup.
 
 ### Creating a repository
-For the puporse of this, i created a repository name `Tonye`, made it public and ticked the chickbox to add a README.md file.
+For the puporse of this, i created a repository name `Tonye`, made it public and ticked the checkbox to add a README.md file.
 
 ![Alt text](<Images/Screenshot 2024-01-31 160919.png>)
 
 ### Pushing your Local git Repository to your Remote github Repository
-After making commits, the next step would be to push this commits to a remote repository. To do this, we have to first link our remote repo to our local repo. We will do this using HTTPS. We will copy the link and run the following command: `git remote add origin https://github.com/Vqshaw/Tonye.git`.
+After making commits, the next step would be to push this commits to a remote repository. To do this, we have to first link our remote repo to our local repo. We will do this using ssh. We will copy the link and run the following command: `git remote add origin git@github.com:Vqshaw/Tonye.git`.
 
 ![Alt text](<Images/Screenshot 2024-01-31 161339.png>)
 
@@ -86,4 +86,56 @@ When done, you will get a prompt to add your username and password, but unfortun
 ![Alt text](<Images/Screenshot 2024-01-31 163522.png>)
 
 In order to add this SSHkey to our Github account, we have to do the following:
+
+- In the upper-right corner of any page, click your profile photo, then click Settings.
+- In the "Access" section of the sidebar, click  SSH and GPG keys.
+- Click New SSH key or Add SSH key.
+- In the "Title" field, add a descriptive label for the new key. 
+- Select the type of key, either authentication or signing.
+- In the "Key" field, paste your public key.
+- Click Add SSH key.
+- If prompted, confirm access to your account on GitHub. For more information, see "Sudo mode."
+
+![Alt text](<Images/Screenshot 2024-02-01 150313.png>)
+
+After that, you add your sshkey to your ssh agent. to do that, i ran this command `ssh-add <file path>` where file path is the path where your key is.
+
+![Alt text](<Images/Screenshot 2024-02-01 150511.png>)
+
+Now, you can run the `git remote set-url <ssh_link` command and it will be a success. so, anytime you run the `git push origin master` command.
+
+![Alt text](<Images/Screenshot 2024-02-01 150702.png>)
+
+## Markdown Syntax
+
+### 1. Headings
+- #heading 1
+- ##heading 2
+- ###heading 3
+
+### 2. Emphasis: asterisks or underscore 
+- *italic * or _ italic _
+- ** bold** or __ bold__
+
+### 3. Lists: ordered and unorderd list
+- unrdered list example:
+
+  - -Item 1
+  - -Item 2
+  - -Item 3
+
+- ordered list example:
+
+  1. Item 1
+  2. Item 2
+  3. Item 3
+
+### 4. Links
+  [visit google.com] (https://google.com)
+
+### 5. Images
+  ![alt text](image link)
+
+### 6. Code: To display code or code snippets, use backticks (`) to enclose the code.
+![Alt text](<Images/Screenshot 2024-02-01 153323.png>)
 
