@@ -75,3 +75,15 @@ Now we can commit our changes using the command `git push origin master` where m
 
 When done, you will get a prompt to add your username and password, but unfortunately, Git has disabled that feature and you would have to link your remote and local repo using an ssh key. Here are the steps below:
 
+- Open your command link interface, and run the command ssh-keygen -t ed25519 -C "your_email@example.com", where **your_email@example.com** is your Github email address.
+
+- You will be prompted to provide a file name for your SSHkey. You can do that or use the default. click enter.
+
+- You will be prompted to provide a password, you can do that or also choose to ignore.
+
+- Download the SSHkey to your local computer. I am using MobaXterm, so I downloaded it to my desktop.
+
+![Alt text](<Images/Screenshot 2024-01-31 163522.png>)
+
+In order to add this SSHkey to our Github account, we have to do the following:
+
